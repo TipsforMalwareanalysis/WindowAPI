@@ -6,14 +6,14 @@ int main()
 {
 	HANDLE hdst = NULL;
 	HANDLE hsrc = NULL;
-	LPCWSTR srcfilepath = L"c:\\windows\\regedit.exe";
+	LPCWSTR srcfilepath = L"c:\\windows\\notepad.exe";
 	LPCWSTR dstfilepath = L"copy_notepad.exe";
 	char readbuffer[BUFFERSIZE] = { 0, };
 	DWORD dwBytesRead = 0;
 	DWORD dwBytesWrite = 0;
 	bool flag = FALSE;
 	
-	// ¸Þ¸ðÀå ÇÚµé »ý¼º
+	// ï¿½Þ¸ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
 	hsrc = CreateFile(srcfilepath,
 		GENERIC_READ,
 		0,
@@ -27,7 +27,7 @@ int main()
 		return -1;
 	}
 
-	// ¸Þ¸ðÀåÀÇ µ¥ÀÌÅÍ¸¦ º¹»çÇÒ ÆÄÀÏ ÇÚµé »ý¼º
+	// ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½
 	hdst = CreateFile(dstfilepath,
 		GENERIC_WRITE,
 		0,
@@ -41,7 +41,7 @@ int main()
 		return -1;
 	}
 
-	// ¸Þ¸ðÀå µ¥ÀÌÅÍ¸¦ ÀÐ°í ±×´ë·Î º¹»ç
+	// ï¿½Þ¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ð°ï¿½ ï¿½×´ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	while (TRUE) {
 		flag = ReadFile(hsrc, readbuffer, BUFFERSIZE - 1, &dwBytesRead, NULL);
 
